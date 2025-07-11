@@ -1,0 +1,17 @@
+<configuration>
+
+    <include resource="org/springframework/boot/logging/logback/defaults.xml"/>
+    <springProperty scope="context" name="springAppName" source="spring.application.name"/>
+
+    <appender name="KAFKA" class="com.github.danielwegener.logback.kafka.KafkaAppender">
+        <topic>logs-topic</topic>
+        <keyingStrategy class="com.github.danielwegener.logback.kafka.keying.NoKeyKeyingStrategy"/>
+        <deliveryStrategy class="com.github.danielwegener.logback.kafka.delivery.AsynchronousDeliveryStrategy"/>
+        <encoder class="net.logstash.logback.encoder.LogstashEncoder"/>
+        <producerConfig>bootstrap.servers=localhost:9092</producerConfig>
+    </appender>
+
+    <root level="INFO">
+        <appender-ref ref="KAFKA"/>
+    </root>
+</configuration>
