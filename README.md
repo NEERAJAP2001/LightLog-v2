@@ -1,6 +1,6 @@
 # 🔍 Real-Time Log Monitoring with Kafka & Spring Boot
 
-A microservice-based logging solution that captures logs from Spring Boot applications, streams them to Kafka, and optionally visualizes them using Kibana. Designed to run efficiently on Kubernetes/OpenShift with scalable architecture.
+A microservice-based logging solution that captures logs from Spring Boot applications, streams them to Kafka, and  visualizes them using Kibana. It is designed to run efficiently on Kubernetes/OpenShift with a scalable architecture.
 
 ---
 
@@ -14,7 +14,7 @@ A microservice-based logging solution that captures logs from Spring Boot applic
 - ✅ REST API to expose logs as JSON
 - ✅ Pluggable alerting system via thresholds
 - ✅ Deployable to Red Hat OpenShift or Kubernetes
-- ✅ Optional ELK integration for advanced analytics
+- ✅  ELK integration for advanced analytics
 
 ---
 
@@ -25,10 +25,10 @@ A microservice-based logging solution that captures logs from Spring Boot applic
 | Logging | `logback-kafka-appender`, `logstash-logback-encoder` | Structured logging + Kafka |
 | Messaging | **Apache Kafka**, **Confluent Cloud** | Stream logs between services |
 | Backend | **Spring Boot** (Java 17) | Log producer & consumer services |
-| Containerization | Docker | To package and deploy to cloud |
+| Containerization | Docker | To package and deploy to the cloud |
 | Orchestration | **OpenShift** / Kubernetes | Service deployment and scaling |
-| Visualization (optional) | **Kibana**, **Logstash**, **Elasticsearch** | Real-time dashboard of logs |
-| Alerting (optional) | Email, Slack (planned) | Trigger alerts based on thresholds |
+| Visualization  | **Kibana**, **Logstash**, **Elasticsearch** | Real-time dashboard of logs |
+| Alerting  | Email, Slack (planned) | Trigger alerts based on thresholds |
 
 ---
 
@@ -40,7 +40,7 @@ A microservice-based logging solution that captures logs from Spring Boot applic
 | (Logback JSON)   |                           | (Spring Boot)     |
 +------------------+                           +------------------+
                                                         |
-                                                        | Optional
+                                                        | stream
                                                         v
                                                 +------------------+
                                                 | Logstash         |
